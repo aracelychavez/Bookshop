@@ -1,0 +1,7 @@
+{
+  "xsappname": "my-bookshop",
+  "tenant-mode": "dedicated",
+  "scopes": [],
+  "attributes": [],
+  "role-templates": []
+}

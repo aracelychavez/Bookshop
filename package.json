@@ -1,0 +1,36 @@
+{
+  "name": "my-bookshop",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^4",
+    "@sap/hana-client": "^2.7.23",
+    "@sap/xsenv": "^3.1.0",
+    "@sap/xssec": "^2.2.5",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.2"
+  },
+  "scripts": {
+    "hana": "cds deploy --to hana:dat160 --auto-undeploy",
+    "start": "cds run",
+    "build": "cds build"
+  },
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "requires": {
+      "db": {
+        "kind": "hana"
+      },
+      "uaa": {
+        "kind": "xsuaa"
+      }
+    }
+  }
+}
